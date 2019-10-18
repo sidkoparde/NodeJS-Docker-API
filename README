@@ -1,0 +1,93 @@
+
+This is a REST API for a blog made using NodeJs, PostgreSQL, and Docker. 
+There are two models: Users and Posts. I use JSON Web Tokens to authenticate
+users and bcrypt to hash passwords.
+
+Instructions for Running:
+    Run Docker on your desktop
+    Open the project directory
+    In the Dockerfile you can select whether you want to run "npm start" or 
+        "npm test". "npm test" is the default.
+    run "docker-compose build"
+    run "docker-compose up"
+
+Note:
+    I use a Docker container for the PostgreSQL database. This API is only 
+    for development purposes.
+
+                        --------------------------------
+
+Base API URL: 
+Endpoints:
+
+-------------------------------------------------------------------------------
+|   HTTP    |             URL             |       Response Description        |
+|  Method   |                             |                                   |
+-------------------------------------------------------------------------------
+|           |                             |                                   |
+|   POST    |  /login                     |  Login a user.                    |
+|           |                             |                                   |
+|           |                             |                                   |
+-------------------------------------------------------------------------------
+|           |                             |                                   |
+|   POST    |  /users                     |  Add a new user to the            |
+|           |                             |  users table.                     |
+|           |                             |                                   |
+-------------------------------------------------------------------------------
+|           |                             |                                   |
+|   GET     |  /users                     |  Return all the entries in the    |
+|           |                             |  users table.                     |
+|           |                             |                                   |
+-------------------------------------------------------------------------------
+|           |                             |                                   |
+|   GET     |  /users/:id                 |  Return the user with the         |
+|           |                             |  specified id.                    |
+|           |                             |                                   |
+-------------------------------------------------------------------------------
+|           |                             |                                   |
+|   PUT     |  /users/:id                 |  Update the user with the         |
+|           |                             |  specified id.                    |
+|           |                             |                                   |
+-------------------------------------------------------------------------------
+|           |                             |                                   |
+|  DELETE   |  /users/:id                 |  Delete the user with the         |
+|           |                             |  specified id.                    |
+|           |                             |                                   |
+-------------------------------------------------------------------------------
+|           |                             |                                   |
+|   GET     |  /users/:id/posts           |  Get posts made by a user with    |
+|           |                             |  the specified id.                |
+|           |                             |                                   |
+-------------------------------------------------------------------------------
+|           |                             |                                   |
+|   GET     |  /posts                     |  Return all the entries in the    |
+|           |                             |  posts table.                     |
+|           |                             |                                   |
+-------------------------------------------------------------------------------
+|           |                             |                                   |
+|   POST    |  /posts                     |  Add a new post to the            |
+|           |                             |  posts table.                     |
+|           |                             |                                   |
+-------------------------------------------------------------------------------
+|           |                             |                                   |
+|   GET     |  /posts/:id                 |  Return the post with the         |
+|           |                             |  specified id.                    |
+|           |                             |                                   |
+-------------------------------------------------------------------------------
+|           |                             |                                   |
+|   PUT     |  /posts/:id                 |  Update the post with the         |
+|           |                             |  specified id.                    |
+|           |                             |                                   |
+-------------------------------------------------------------------------------
+|           |                             |                                   |
+|  DELETE   |  /posts/:id                 |  Delete the post with the         |
+|           |                             |  specified id.                    |
+|           |                             |                                   |
+-------------------------------------------------------------------------------
+
+
+I used the following tutorials:
+https://dev.to/uf4no/building-a-javascript-auth-system-using-tdd-part-1-1e42
+https://scotch.io/tutorials/authenticate-a-node-es6-api-with-json-web-tokens
+https://scotch.io/tutorials/test-a-node-restful-api-with-mocha-and-chai
+https://scotch.io/tutorials/build-a-restful-api-using-node-and-express-4
