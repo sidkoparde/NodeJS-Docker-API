@@ -1,7 +1,7 @@
 
 This is a REST API for a blog made using NodeJs, PostgreSQL, and Docker. 
-There are two models: Users and Posts. I use JSON Web Tokens to authenticate
-users and bcrypt to hash passwords.
+There are two models: Users and Posts. I use Sequelie for ORM, 
+JSON Web Tokens to authenticate users, and bcrypt to hash passwords.
 
 Instructions for Running:
     Run Docker on your desktop
